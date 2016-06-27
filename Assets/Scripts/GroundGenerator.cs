@@ -19,8 +19,8 @@ public class GroundGenerator : MonoBehaviour
     {
         if (transform.position.x < generationPoint.position.x)
         {
+            //Debug.Log("ground");
             transform.position = new Vector3(transform.position.x + groundWidth, transform.position.y);
-
             Instantiate(ground, transform.position, transform.rotation);
         }
     }

@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Bird : MonoBehaviour
 {
-    public float jumpHeight = 12;
+    public float jumpHeight = 15;
 
     // Use this for initialization
     void Start()
@@ -22,7 +23,9 @@ public class Bird : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Application.LoadLevel(Application.loadedLevel);
+        //Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene("main");
+        
     }
 
 }
