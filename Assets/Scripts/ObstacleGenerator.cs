@@ -21,10 +21,9 @@ public class ObstacleGenerator : MonoBehaviour
         float test = transform.position.x + frequency;
         if (!isSpawned && (test < generationPoint.position.x))
         {
-            Debug.Log("obstacle");
-            var obstaclePosition = new Vector3(generationPoint.position.x, transform.position.y);
+            var obstaclePosition = new Vector3(generationPoint.position.x, Random.Range(15, 23));
             Instantiate(obstacle, obstaclePosition, transform.rotation);
             isSpawned = true;
         }
-	}
+    }
 }
