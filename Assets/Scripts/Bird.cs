@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Bird : MonoBehaviour
 {
-    public float jumpHeight = 15;
+    public float jumpHeight;
 
     // Use this for initialization
     void Start()
@@ -24,7 +24,6 @@ public class Bird : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         SceneManager.LoadScene("main");
-        
     }
 
 }
